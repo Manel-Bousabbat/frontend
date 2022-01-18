@@ -1,0 +1,29 @@
+.paddings{
+    margin-bottom: 10%;
+}
+.center {
+  margin: 0;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.buttonIcon{
+  border: none;
+  background-color: rgba(0,0,0,.03);
+}
+  
+
+.centred{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textCenter{
+  text-align: center;
+}

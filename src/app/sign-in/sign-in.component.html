@@ -1,0 +1,61 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<html>
+    <body>
+    
+        <video playsinline autoplay muted loop id="bgvid">
+            <source src="./../../assets/videos/Macro_Plex_4K_Motion_Background_Loop.mp4" type="video/webm">
+            <source src="./../../assets/videos/Macro_Plex_4K_Motion_Background_Loop.mp4" type="video/mp4">
+        </video>
+        <header class="viewport-header">
+            <h1>
+              Université
+              <span> Tunis  EL  Manar</span>
+            </h1>
+        </header>
+        <div class=" main container login-container">
+            <main>
+                <div >
+                    <div class="row centred"  style="width: 100%;">
+                        <div class=" article-content col-md-6 login-form-1">
+                            <h3>Personnel Login</h3>
+                            <form [formGroup]="loginForm" class="form1" (ngSubmit)="onSubmit()">
+                                <div class="form-group">
+                                    <input type="text" formControlName="username" placeholder="Nom d'utilisateur" class="form-control input1" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                        <div *ngIf="f.username.errors.required">Nom d'utilisateur est obligatoire</div>
+                                    </div> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" formControlName="password" placeholder="Mot de passe" class="form-control input1" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                        <div *ngIf="f.password.errors.required">Mot de passe est obligatoire</div>
+                                    </div>
+                                </div>
+                                <button [disabled]="loading" class="btnSubmit btn1" >
+                                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                    Login
+                                </button>
+                                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                                
+                                <div class="form-group">
+                                    <br>
+                                    <a href="#" class="ForgetPwd">Forget Password?</a>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+            </main>
+                    
+        </div>
+        
+        </body>
+        
+</html>

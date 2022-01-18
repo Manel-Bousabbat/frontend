@@ -1,0 +1,27 @@
+.rightPosition{
+    padding-right: 0px;
+}
+
+.floatToRight{
+    float: right!important;
+}
+
+.floatToLeft{
+    float: left!important;
+}
+
+.textRight{
+    text-align: right!important;
+}
+
+.footable.breakpoint.toggle-arrow-tiny > tbody > tr > td > span.footable-toggle:before {
+    content: "\e020"!important;
+  }
+
+  .footable-toggle{
+      float: left!important;
+  }
+
+  .divCenter{
+      text-align: center!important;
+  }
